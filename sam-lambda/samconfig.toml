@@ -1,0 +1,11 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "bedrock-core-api"
+resolve_s3 = true
+s3_prefix = "bedrock-core-api"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "BedrockAgentRuntimeArn=\"arn:aws:bedrock-agentcore:us-east-1:YOUR_ACCOUNT_ID:runtime/YOUR_RUNTIME_NAME\" LineChannelAccessToken=\"YOUR_LINE_CHANNEL_ACCESS_TOKEN\" LineChannelSecret=\"YOUR_LINE_CHANNEL_SECRET\""
+image_repositories = []
+disable_rollback = true
